@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="myApp">
+<form>
+  <label>Choose city:
+    <input type="text" ng-model="city" placeholder="For example, London..." autofocus>
+  </label>
+</form>
+<h1>Search by city {{city}}</h1>
+
+  <ul class="menu">
+    <li><a href="#!/weather-per-day">view1</a></li>
+    <li><a href="#!/view2">view2</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="weather-per-day/weather-per-day.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="core/version/version.js"></script>
+  <script src="core/version/version-directive.js"></script>
+  <script src="core/version/interpolate-filter.js"></script>
+</body>
+</html>
