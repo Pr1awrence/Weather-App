@@ -6,8 +6,8 @@ angular.module('myApp', [
     'weatherPerDay'
 ]);
 /*.controller('myApp', function () {
-});*/
-
+});
+*/
 /*config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 

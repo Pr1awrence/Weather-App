@@ -3,7 +3,10 @@
 angular.module('weatherPerDay', ['ngRoute'])
     .component('weatherPerDay', {
         templateUrl: 'weather-per-day/weather-per-day.template.html',
-        controller: function () {
-            this.weatherInDay = {};
+        bindings: {
+            day: '='
+        },
+        controller: function ($scope) {
+            $scope.Math = window.Math;
         }
     });

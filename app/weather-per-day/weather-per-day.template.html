@@ -1,11 +1,7 @@
-<!--
-<div ng-controller="weatherPerDay">
-    <div class="weather-block" ng-repeat="day in period">
-        <h2>{{day.name}}</h2>
-        <p>{{day.date}}</p>
-        <p>{{day.temperature}} °C</p>
-    </div>
+<div class="weather-period-block">
+    <h2>{{city}}</h2>
+    <img ng-src="http://openweathermap.org/img/w/{{$ctrl.day.weather[0].icon}}.png">
+    <p>{{($ctrl.day.dt_txt).slice(0,10)}}</p>
+    <p>{{main.temp}}</p>
+    <p>{{Math.round($ctrl.day.main.temp - 273)}} °C</p>
 </div>
--->
-<h2>Text...</h2>
-
