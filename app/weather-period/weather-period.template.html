@@ -1,0 +1,7 @@
+<h1>SOME TEXT</h1>
+<weather-per-day></weather-per-day>
+<div class="weather-period-block" ng-repeat="day in $ctrl.weatherInPeriod">
+  <h2>{{day.name}}</h2>
+  <p>{{day.date}}</p>
+  <p>{{day.temperature}} °C</p>
+</div>
