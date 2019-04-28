@@ -4,7 +4,16 @@
   </label>
   <button ng-click="$ctrl.getDataFromWeatherAPI()">Check the weather</button>
 </form>
-<weather-per-day ng-if="!$ctrl.err" ng-repeat="item in weatherInPeriod" day="item"></weather-per-day>
+<div ng-show="!$ctrl.err">
+Order by:
+<select ng-model="sortColumn">
+  <option value="+main.temp">Weather (Ascending)</option>
+  <option value="-main.temp">Weather (Descending)</option>
+  <option value="+dt_txt">Date (Ascending)</option>
+  <option value="-dt_txt">Date (Descending)</option>
+</select>
+</div>
+<weather-per-day ng-if="!$ctrl.err" ng-repeat="item in weatherInPeriod | orderBy : sortColumn" day="item"></weather-per-day>
 <div ng-if="$ctrl.err">
   <h1>{{errMessage}}</h1>
 </div>

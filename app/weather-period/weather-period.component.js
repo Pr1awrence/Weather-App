@@ -12,10 +12,11 @@ angular.module('weatherPeriod', ['ngRoute'])
                         $scope.weatherInPeriod = response.data.list.filter(day => day.dt_txt.match(/15:00:00/g) !== null )
                     })
                     .catch(e => {
-                        console.log(e);
                         $scope.errMessage = e.data.message;
                         this.err = true;
                     })
             };
+
+            $scope.sortColumn = "+main.temp";
         }
     });
