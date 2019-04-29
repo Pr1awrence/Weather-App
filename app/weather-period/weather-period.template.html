@@ -1,14 +1,17 @@
-<h1>5 day weather forecast in {{city}}</h1>
-<div ng-show="!$ctrl.err">
-Order by:
-<select ng-model="sortColumn">
-  <option value="+main.temp">Weather (Ascending)</option>
-  <option value="-main.temp">Weather (Descending)</option>
-  <option value="+dt_txt">Date (Ascending)</option>
-  <option value="-dt_txt">Date (Descending)</option>
-</select>
-</div>
-<weather-per-day ng-if="!$ctrl.err" ng-repeat="item in weatherInPeriod | orderBy : sortColumn" day="item"></weather-per-day>
-<div ng-if="$ctrl.err">
-  <h1>{{errMessage}}</h1>
+<div class="w-container">
+    <h1 class="w-container__header">5 day weather forecast in {{city}}</h1>
+    <div ng-show="!$ctrl.err" class="w-container__select">
+        Order by:
+        <select ng-model="sortColumn">
+            <option value="+dt_txt">Date (Ascending)</option>
+            <option value="-dt_txt">Date (Descending)</option>
+            <option value="+main.temp">Weather (Ascending)</option>
+            <option value="-main.temp">Weather (Descending)</option>
+        </select>
+    </div>
+    <weather-per-day ng-if="!$ctrl.err" ng-repeat="item in weatherInPeriod | orderBy : sortColumn"
+                     day="item"></weather-per-day>
+    <div ng-if="$ctrl.err" class="w-container__error">
+        <h1>{{errMessage}}</h1>
+    </div>
 </div>

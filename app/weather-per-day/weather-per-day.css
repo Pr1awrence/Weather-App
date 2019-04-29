@@ -1,0 +1,24 @@
+.w-period-container {
+    margin: 10px auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #222222;
+    background-color: ivory;
+    font-family: Helvetica Narrow, sans-serif;
+    color: #333333;
+}
+
+.w-period-container__icon {
+    padding-left: 30px;
+}
+
+.w-period-container__data {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.w-period-container__temp {
+    font-size: 17px;
+}

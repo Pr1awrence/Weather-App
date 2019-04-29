@@ -1,7 +1,5 @@
-<div class="weather-period-block">
-    <h2>{{city}}</h2>
-    <img ng-src="http://openweathermap.org/img/w/{{$ctrl.day.weather[0].icon}}.png">
-    <p>{{($ctrl.day.dt_txt).slice(0,10)}}</p>
-    <p>{{main.temp}}</p>
-    <p>{{Math.round($ctrl.day.main.temp - 273)}} °C</p>
+<div class="w-period-container">
+    <p class="w-period-container__data">{{convertDate($ctrl.day.dt_txt)}}</p>
+    <img class="w-period-container__icon" ng-src="http://openweathermap.org/img/w/{{$ctrl.day.weather[0].icon}}.png">
+    <p class="w-period-container__temp">{{Math.round($ctrl.day.main.temp - 273)}} °C</p>
 </div>

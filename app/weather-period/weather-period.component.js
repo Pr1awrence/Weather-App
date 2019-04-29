@@ -25,6 +25,6 @@ angular.module('weatherPeriod', ['ngRoute'])
                     })
             };
 
-            $scope.sortColumn = "+main.temp";
+            $scope.sortColumn = "+dt_txt";
         }
     });

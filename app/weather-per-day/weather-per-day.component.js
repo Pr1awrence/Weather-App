@@ -8,5 +8,11 @@ angular.module('weatherPerDay', ['ngRoute'])
         },
         controller: function ($scope) {
             $scope.Math = window.Math;
+            $scope.Date = window.Date;
+
+            $scope.convertDate = function(day) {
+                $scope.date = new Date(day).toDateString();
+                return $scope.date;
+            }
         }
     });
