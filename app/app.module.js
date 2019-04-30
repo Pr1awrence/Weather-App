@@ -25,7 +25,7 @@ angular.module('myApp', [
     });
 
     $routeProvider
-        .when('/city', {
+        .when('/cities/:cityName', {
             template: '<weather-period></weather-period>'
         });
 

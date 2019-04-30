@@ -3,10 +3,10 @@
 angular.module('weatherPeriod', ['ngRoute'])
     .component('weatherPeriod', {
         templateUrl: 'weather-period/weather-period.template.html',
-        controller: function ($scope, $http, $location) {
+        controller: function ($scope, $http, $location, $routeParams) {
 
             this.$onInit = () => {
-                let city = $location.search().q;
+                let city = $routeParams.cityName;
                 $scope.city = city;
                 this.getDataFromWeatherAPI(city);
             };
